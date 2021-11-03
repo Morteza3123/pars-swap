@@ -6,6 +6,7 @@ body{
   justify-content: center;
   display: flex;
   padding: 90px 0  90px 0;
+  margin-top: 60px;
   background-color: rgb(247, 230, 230);
 }
 
@@ -20,24 +21,13 @@ body{
   background-color: white;
 }
 
-/* input {
-  width: 80%;
-  padding: 10px 20px;
-  margin: 20px 5px;
-  box-sizing: 8px;
-  border-radius: 60px ;
-  border: 10px rgb(209, 205, 205);
-  background-color: rgb(226, 232, 235);
-} */
+
 
 .b{
   margin: 30px 5px;
 }
 
-button{
-  /* padding: 10px 20px; */
-  /* width: 30%; */
-}
+
 
 .form{
   margin-left: 10%;

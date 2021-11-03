@@ -12,7 +12,7 @@ body{
 .sub-main{
   display:flexwq`1;
   justify-content: center;
-  height: 300px;
+  height: 350px;
   width: 50%;
   box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
   padding-top: 30px;
@@ -20,7 +20,7 @@ body{
   background-color: white;
 }
 
-input {
+/* input {
   width: 80%;
   padding: 10px 20px;
   margin: 20px 5px;
@@ -28,20 +28,18 @@ input {
   border-radius: 60px ;
   border: 10px rgb(209, 205, 205);
   background-color: rgb(226, 232, 235);
-}
+} */
 
 .b{
   margin: 30px 5px;
 }
 
 button{
-  padding: 10px 20px;
-  width: 30%;
+  /* padding: 10px 20px; */
+  /* width: 30%; */
 }
 
 .form{
-  /* background-color: aqua; */
   margin-left: 10%;
   width: 80%;
-  /* height: 90%; */
 }

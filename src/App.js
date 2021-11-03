@@ -3,32 +3,68 @@ import './App.css';
 
 function App() {
   return (
-    
-    <div className="main">
-      <div className="sub-main">
-      <div className="form">
-      <label className="float-start">from</label><br/>
-      <input className= "a"/>
-      <input className="b"/><br/>
-      <button type="submit" className="btn btn-primary">SWAP!</button>
+  <form className="mb-3">
+      <div className="main">
+        <div className="sub-main">
+              <div className="form">
+
+                    <div>
+                        <label className="float-start"><b>Input</b></label>
+                        <label className="float-end" >Balance : </label>
+                    </div>
+
+                    <div className="input-group mb-5">
+                        <input className= "a" className="form-control form-control-lg"/>
+                        <div className="input-group-append">
+                            <div className="input-group-text">
+                                <img src={logo} height='32' alt=""/>
+                                &nbsp;&nbsp;&nbsp; ETH
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <label className="float-start"><b>Output</b></label>
+        
+        
+        <span className="float-end">
+                Balance: 
+        </span>
+        
+        
+        <div className="input-group mb2">
+            <input
+                type="text"
+                className="form-control form-control-lg"
+                placeholder="0"
+                
+                disabled
+            />
+            <div className="input-group-append">
+                <div className="input-group-text">
+                    <img src={logo} height='32' alt=""/>
+                    &nbsp; Dapp
+                </div>
+            </div>
+        </div>
+        <div className="mb-5">
+            <span className="float-start">Exchange Rate</span>
+            <span className="float-end">
+                1ETH = 100 Dapp</span>
+        </div>
+        <div className="d-grid gap-2">
+        <button type="submit" className="btn btn-primary">SWAP!</button>
+        </div>
+      
+
+
+              </div>
+           </div>
       </div>
       
-      <div class="input-group mb-3">
-  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-  <ul class="dropdown-menu dropdown-menu-end">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
+  </form>
 
-      </div>
-    
-    </div>
-    
   );
 }
 

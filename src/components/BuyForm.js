@@ -89,7 +89,6 @@ class BuyForm extends Component {
                         className="form-control form-control-lg"
                         placeholder="0"
                         value={this.state.output}
-                        disabled
                     />
                     
                     <div className="input-group-append">

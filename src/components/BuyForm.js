@@ -14,21 +14,14 @@ class BuyForm extends Component {
         }
     }
 
-    // changeForm = () => {
-    //     console.log("ffff")
-    //     if(this.props.currentForm == 'buy'){
-    //       this.setState({currentForm : 'sell'})
-    //     }else{
-    //       this.setState({currentForm : 'buy'}) 
-    //     }
-    // }
+    
     
 
   render(){
 
       return (
 
-        <form  onSubmit={(event) => {
+    <form  onSubmit={(event) => {
             event.preventDefault()
             let etherAmount
             etherAmount = this.input.value.toString()
@@ -37,8 +30,8 @@ class BuyForm extends Component {
             }}>
 
 
-            <div className="form">
 
+        <div className="form">
                                 
             <div>
                 <label className="float-start"><b>From</b></label>
@@ -128,11 +121,11 @@ class BuyForm extends Component {
             </div>
 
 
-            </div>
+        </div>
 
 
 
-            </form>
+    </form>
 )
 }
 }

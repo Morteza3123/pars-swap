@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(247, 230, 230);
+  background-color: rgb(197, 203, 223);
 }
 .main{
   text-align: center;
@@ -7,7 +7,7 @@ body{
   display: flex;
   padding: 90px 0  90px 0;
   margin-top: 60px;
-  background-color: rgb(247, 230, 230);
+  background-color: rgb(197, 203, 223);
 }
 
 .sub-main{

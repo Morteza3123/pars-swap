@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// import logo from '../logo.svg';
 import '../App.css';
 import arrow from "../arrow.png";
 import BuyForm from './BuyForm';
 import SellForm from './SellForm';
-// import Go from './Go';
 
 
 
@@ -20,19 +18,26 @@ class Main extends Component {
         }
     }
     
+
+
+
      changeForm = () => {
       console.log("ffff")
       this.setState({currentForm : 'sell'})
-      // if(this.state.currentForm == 'buy'){
-      //   this.setState({currentForm : 'sell'})
-      // }else{
-      //   this.setState({currentForm : 'buy'}) 
-      // }
-  }
+    }
+
+    changeForm2 = () => {
+    console.log("ffff")
+    this.setState({currentForm : 'buy'})
+    }
+
+
+
+
 
   render(){
       
-    console.log(this.state.currentForm)
+
 
     let content
 
@@ -49,10 +54,11 @@ class Main extends Component {
             ethBalance={this.props.ethBalance}
             tokenBalance={this.props.tokenBalance}
             sellTokens={this.props.sellTokens}
-            changeForm={this.changeForm}
+            changeForm2={this.changeForm2}
             currentForm={this.state.currentForm}
           />
       }
+
 
      
 
@@ -61,8 +67,8 @@ class Main extends Component {
 
         <div className="sub-main">
                {content}
+        </div>
 
-           </div>
 
 
   )

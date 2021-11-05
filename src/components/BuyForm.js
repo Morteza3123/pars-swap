@@ -14,14 +14,14 @@ class BuyForm extends Component {
         }
     }
 
-    changeForm = () => {
-        console.log("ffff")
-        if(this.props.currentForm == 'buy'){
-          this.setState({currentForm : 'sell'})
-        }else{
-          this.setState({currentForm : 'buy'}) 
-        }
-    }
+    // changeForm = () => {
+    //     console.log("ffff")
+    //     if(this.props.currentForm == 'buy'){
+    //       this.setState({currentForm : 'sell'})
+    //     }else{
+    //       this.setState({currentForm : 'buy'}) 
+    //     }
+    // }
     
 
   render(){
@@ -95,7 +95,7 @@ class BuyForm extends Component {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="0"
-                        value={this.state.value}
+                        value={this.state.output}
                         disabled
                     />
                     

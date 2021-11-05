@@ -1,20 +1,21 @@
 import Web3 from 'web3';
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Main from './components/Main';
 import Navbar from './components/Navbar';
 import Token from './contract/Token.json';
 import ParsSwap from './contract/ParsSwap.json';
-// import { render } from '@testing-library/react';
 import { Component } from 'react';
 
 class App extends Component {
+
 
   async componentWillMount(){
       await this.loadWeb3()
       await this.loadBlockchainData()
   }
+
+
 
   //load web3
   async loadWeb3(){
@@ -30,6 +31,9 @@ class App extends Component {
       }
   }
 
+
+
+
   //loadBlockchainData 
   async loadBlockchainData() {
     const web3 = window.web3;
@@ -40,6 +44,7 @@ class App extends Component {
 
     const ethBalance = await web3.eth.getBalance(this.state.account);
     this.setState({ethBalance });
+
 
 
     //load Token
@@ -58,20 +63,24 @@ class App extends Component {
     }
     
 
+
     //load ParsSwap
     const parsSwapData = ParsSwap.networks[networkId]
-    if(parsSwapData){
-      const parsSwap = new web3.eth.Contract(ParsSwap.abi, parsSwapData.address);
-      this.setState({parsSwap})
-      this.setState({ parsSwapAddress : parsSwapData.address})
+      if(parsSwapData){
+        const parsSwap = new web3.eth.Contract(ParsSwap.abi, parsSwapData.address);
+        this.setState({parsSwap})
+        this.setState({ parsSwapAddress : parsSwapData.address})
+        
+        
+      }else{
+        window.alert('Token contract not deployed to detected network')
+      }
+      this.setState({ loading : false })
       
-      
-    }else{
-      window.alert('Token contract not deployed to detected network')
     }
-    this.setState({ loading : false })
-    
-  }
+
+
+
   
 
 
@@ -82,6 +91,8 @@ class App extends Component {
       this.setState({ loading : false})
     })
   }
+
+
 
 
   //sell tokens function
@@ -95,40 +106,45 @@ class App extends Component {
   }
 
 
-  constructor(props){
-    super(props)
-    this.state = {
-      account:'',
-      token: {},
-      parsSwap: {},
-      ethBalance: '0',
-      tokenBalance: '0',
-      tokenAddress:'',
-      parsSwapAddress:'',
-      loading: true
-    }
-    
-  }
+
+
+
+      constructor(props){
+        super(props)
+        this.state = {
+          account:'',
+          token: {},
+          parsSwap: {},
+          ethBalance: '0',
+          tokenBalance: '0',
+          tokenAddress:'',
+          parsSwapAddress:'',
+          loading: true
+        }
+        
+      }
+
+
 
 
     render(){
 
-      let content
-    
-    if(this.state.loading) {
-      content = <p id="leader" className="text-center">Loading ...</p>
-    } else {
-      content = <Main 
-      ethBalance={this.state.ethBalance}  
-      tokenBalance={this.state.tokenBalance}
-      buyTokens={this.buyTokens} 
-      sellTokens={this.sellTokens}
-      />
-    }
+          let content
+        
+        if(this.state.loading) {
+          content = <p id="leader" className="text-center">Loading ...</p>
+        } else {
+          content = <Main 
+          ethBalance={this.state.ethBalance}  
+          tokenBalance={this.state.tokenBalance}
+          buyTokens={this.buyTokens} 
+          sellTokens={this.sellTokens}
+          />
+        }
+
 
   return (
 
-  // <form className="mb-3">
       <div className="main">
 
         <Navbar account={this.state.account}/>
@@ -136,7 +152,6 @@ class App extends Component {
         {content}
       </div>
       
-  // </form>
 
   );
 }

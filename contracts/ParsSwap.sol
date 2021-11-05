@@ -46,7 +46,7 @@ contract ParsSwap {
         require(address(this).balance >= etherAmount);
         require(token.balanceOf(msg.sender) >= _amount);
 
-        token.transferFrom(address(this), msg.sender, _amount);
+        token.transferFrom(msg.sender, address(this), _amount);
         payable(msg.sender).transfer(etherAmount);
 
         emit TokenSold(msg.sender, address(token), _amount, rate);  

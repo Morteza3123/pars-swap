@@ -13,6 +13,8 @@ class SellForm extends Component {
         }
     }
 
+
+
   render(){
 
       return (
@@ -64,7 +66,7 @@ class SellForm extends Component {
 
                     
                     
-                    <div className="pt-0 pt-2"><a href="#"><img src={arrow} height='15' alt='' onClick={() => this.props.changeForm} href='#'/></a></div>
+                    <div className="pt-0 pt-2"><a href="#"><img src={arrow} height='15' alt='' onClick={() => this.props.changeForm2} href='#'/></a></div>
 
 
                     
@@ -122,7 +124,6 @@ class SellForm extends Component {
               </div>
           
           
-
             </form>
   )
 }
